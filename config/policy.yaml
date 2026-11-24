@@ -1,0 +1,23 @@
+# Tier policy (thesis Table 3.4). Change the version whenever anything here changes,
+# and record who approved it. Values below are STARTING values drawn from the
+# literature (thesis Chapter Two); the facility administrator reviews and approves them.
+version: "1.0"
+approved_by: "PLACEHOLDER - facility administrator name"
+approved_at: "PLACEHOLDER - date approved"
+
+weights:
+  rule: 0.5            # w_r: reliability of the detection rule
+  corroboration: 0.3   # w_k: related alerts on the same device
+  blocklist: 0.2       # w_b: external address on the local blocklist
+
+thresholds:
+  tier1_confidence: 0.85
+  tier2_confidence: 0.50
+  high_severities: [High, Critical]
+
+corroboration_window_minutes: 10
+
+# Only actions listed here may ever be taken automatically.
+# Approved by the facility administrator. 'isolate_internal_host' is left out on purpose.
+approved_actions:
+  - block_external_ip

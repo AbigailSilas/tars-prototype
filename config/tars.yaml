@@ -1,0 +1,21 @@
+# Main TARS configuration. Paths are relative to the project folder.
+eve_path: /var/log/suricata/eve.json
+database: data/tars.db
+assets: config/assets.yaml
+policy: config/policy.yaml
+contacts: config/contacts.yaml
+blocklist: config/blocklist.txt
+
+# Facility address ranges; keep the same as HOME_NET in suricata.yaml
+home_net: [192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12]
+
+containment:
+  enabled: false        # false = dry-run: TARS records what it WOULD block but changes nothing
+  family: inet
+  table: tars
+  set: blocklist
+
+notifications:
+  enabled: false        # false = dry-run: messages are recorded but not sent
+  suppress_repeat_minutes: 30
+  escalate_after_minutes: 60

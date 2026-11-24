@@ -1,0 +1,9 @@
+scenario,expected_tier,source_of_expectation
+s1_repeated_attack_workstation,1,derived in advance from the tier rules (thesis Section 3.5.1)
+s2_repeated_attack_ehr_server,2,derived in advance from the tier rules (thesis Section 3.5.1)
+s3_single_event_unknown_source,2,derived in advance from the tier rules (thesis Section 3.5.1)
+s4_bad_domain_lookup,3,derived in advance from the tier rules (thesis Section 3.5.1)
+s5_external_ping,3,derived in advance from the tier rules (thesis Section 3.5.1)
+s6_internal_lateral,2,derived in advance from the tier rules (thesis Section 3.5.1)
+s7_repeated_attack_medical_device,2,derived in advance from the tier rules (thesis Section 3.5.1)
+s8_repeated_unknown_source,2,derived in advance from the tier rules (thesis Section 3.5.1)

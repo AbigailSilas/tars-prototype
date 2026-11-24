@@ -1,0 +1,7 @@
+.venv/
+data/*.db
+.env
+__pycache__/
+scenarios/results.csv
+scenarios/benchmark.csv
+.pytest_cache/

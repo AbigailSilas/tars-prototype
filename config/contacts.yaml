@@ -1,0 +1,15 @@
+# People TARS notifies. Use international format (+234...).
+# notify_tiers: which tiers this person is told about. escalation: also receives escalations.
+contacts:
+  - name: Duty administrator
+    role: administrator
+    phone: "+2348000000001"
+    channel: sms
+    notify_tiers: [1, 2]
+    escalation: true
+  - name: IT contractor
+    role: it_contractor
+    phone: "+2348000000002"
+    channel: whatsapp
+    notify_tiers: [1, 2]
+    escalation: false

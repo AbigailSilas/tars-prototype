@@ -1,0 +1,15 @@
+# Optional: run TARS as a background service on the test machine.
+# Copy to /etc/systemd/system/tars.service, adjust the paths, then:
+#   sudo systemctl daemon-reload && sudo systemctl enable --now tars
+[Unit]
+Description=TARS decision-and-action layer
+After=suricata.service
+
+[Service]
+WorkingDirectory=/opt/tars-prototype
+ExecStart=/opt/tars-prototype/.venv/bin/python -m tars run
+EnvironmentFile=-/opt/tars-prototype/.env
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

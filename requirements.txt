@@ -1,0 +1,4 @@
+PyYAML>=6.0
+twilio>=9.0      # only needed when real notifications are switched on
+pytest>=8.0
+scapy>=2.5       # only needed to build the test scenario PCAP files

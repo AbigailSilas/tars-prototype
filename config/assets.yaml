@@ -1,0 +1,23 @@
+# Asset inventory: one entry per important device on the facility network.
+# protected: true = TARS will never contain anything involving this device automatically.
+assets:
+  - ip: 192.168.10.5
+    hostname: ehr-server
+    device_type: EHR server
+    criticality: high
+    protected: true
+  - ip: 192.168.10.21
+    hostname: reception-pc
+    device_type: workstation
+    criticality: medium
+    protected: false
+  - ip: 192.168.10.22
+    hostname: lab-pc
+    device_type: workstation
+    criticality: medium
+    protected: false
+  - ip: 192.168.10.30
+    hostname: lab-analyser
+    device_type: medical device
+    criticality: high
+    protected: true
